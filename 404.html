@@ -1,17 +1,21 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23E91E63'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2' stroke='white' stroke-width='2' stroke-linecap='round'/></svg>" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SheRide Admin Portal | Real-time Fleet & Operations</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="./assets/index-ByyPjJSE.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-AoQRiB5u.css">
+    <meta charset="utf-8">
+    <title>SheRide Admin Portal</title>
+    <script type="text/javascript">
+      var path = window.location.pathname;
+      var repo = '/sheride-admin';
+      var subpath = path.indexOf(repo) === 0 ? path.substring(repo.length) : path;
+      if (subpath.charAt(0) === '/') subpath = subpath.substring(1);
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+      window.location.replace(window.location.origin + repo + '/#/' + subpath + search + hash);
+    </script>
   </head>
-  <body class="bg-slate-50 min-h-screen">
-    <div id="root"></div>
+  <body>
+    <p style="font-family: sans-serif; text-align: center; margin-top: 50px; color: #E91E63; font-weight: bold;">
+      Redirecting to SheRide Admin Portal...
+    </p>
   </body>
 </html>
