@@ -83,7 +83,7 @@ export const LoginPage: React.FC = () => {
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center p-3.5 bg-white rounded-3xl shadow-xl shadow-purple-500/10 border border-purple-100/80 mb-5 transform hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 group cursor-default">
             <img 
-              src="/bannerlog.png" 
+              src={`${import.meta.env.BASE_URL}bannerlog.png`} 
               alt="Lady Pilot" 
               className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />

@@ -92,14 +92,14 @@ export const Sidebar: React.FC<{ isCollapsed?: boolean; onToggle?: () => void }>
         <div className="flex items-center gap-2.5 overflow-hidden">
           {isCollapsed ? (
             <img 
-              src="/final-logo1-1.jpeg" 
+              src={`${import.meta.env.BASE_URL}final-logo1-1.jpeg`} 
               alt="Lady Pilot" 
               className="w-9 h-9 rounded-xl object-contain shadow-xs border border-purple-100" 
             />
           ) : (
             <div className="flex items-center gap-2">
               <img 
-                src="/final-logo1-1.jpeg" 
+                src={`${import.meta.env.BASE_URL}final-logo1-1.jpeg`} 
                 alt="Lady Pilot" 
                 className="w-8 h-8 rounded-xl object-contain shadow-xs border border-purple-100 shrink-0" 
               />
