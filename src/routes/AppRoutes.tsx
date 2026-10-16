@@ -15,12 +15,17 @@ import { SafetyPage } from '../features/safety/SafetyPage';
 import { OffersPage } from '../features/offers/OffersPage';
 import { AnalyticsPage } from '../features/analytics/AnalyticsPage';
 import { SettingsPage } from '../features/settings/SettingsPage';
+import { PlayConsoleLegalPage } from '../features/legal/PlayConsoleLegalPage';
 
 export const AppRoutes: React.FC = () => {
   return (
     <Routes>
-      {/* Public Login Route */}
+      {/* Public Routes */}
       <Route path="/login" element={<LoginPage />} />
+      <Route path="/legal" element={<PlayConsoleLegalPage />} />
+      <Route path="/privacy" element={<PlayConsoleLegalPage />} />
+      <Route path="/terms" element={<PlayConsoleLegalPage />} />
+      <Route path="/delete-account" element={<PlayConsoleLegalPage />} />
 
       {/* Protected Admin Console Routes */}
       <Route
@@ -43,6 +48,7 @@ export const AppRoutes: React.FC = () => {
         <Route path="offers" element={<OffersPage />} />
         <Route path="analytics" element={<AnalyticsPage />} />
         <Route path="settings" element={<SettingsPage />} />
+        <Route path="legal" element={<PlayConsoleLegalPage />} />
       </Route>
 
       {/* Fallback */}

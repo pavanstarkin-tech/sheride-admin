@@ -17,7 +17,8 @@ import {
   ChevronRight,
   PanelLeftClose,
   PanelLeftOpen,
-  Sparkles
+  Sparkles,
+  FileText
 } from 'lucide-react';
 import { useFleetStore } from '../../stores/fleetStore';
 import { cn } from '../../lib/utils';
@@ -74,6 +75,7 @@ export const Sidebar: React.FC<{ isCollapsed?: boolean; onToggle?: () => void }>
     },
     { name: 'Analytics', to: '/analytics', icon: <BarChart3 className="w-5 h-5" /> },
     { name: 'Offers & Promos', to: '/offers', icon: <Tag className="w-5 h-5" /> },
+    { name: 'Play Console Legal', to: '/legal', icon: <FileText className="w-5 h-5" /> },
     { name: 'Settings & Logs', to: '/settings', icon: <Settings className="w-5 h-5" /> },
   ];
 

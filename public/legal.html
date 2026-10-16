@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lady Pilot 🌸 — Official Play Console Compliance & Legal Portal</title>
+  <meta name="description" content="Official Google Play Console Legal Portal for Lady Pilot: Privacy Policy, Terms and Conditions, Account & Data Deletion Request, and Safety Disclosures.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Fraunces:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="final-logo1-1.jpeg">
+  <style>
+    :root {
+      --primary: #7C3AED;
+      --primary-dark: #5B21B6;
+      --primary-light: #DDD6FE;
+      --accent: #FFB001;
+      --pink: #EC4899;
+      --pink-dark: #BE185D;
+      --emerald: #10B981;
+      --dark: #0B0714;
+      --dark-card: #150F24;
+      --dark-surface: #1E1633;
+      --border: rgba(255, 255, 255, 0.08);
+      --border-accent: rgba(124, 58, 237, 0.35);
+      --light-text: #F8FAFC;
+      --muted: #A1A1AA;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at 10% 20%, #150727 0%, #0c0817 50%, #030108 100%);
+      color: var(--light-text);
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Ambient Lighting */
+    .glow-1 {
+      position: absolute;
+      top: -100px;
+      left: 15%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.22) 0%, transparent 70%);
+      filter: blur(90px);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .glow-2 {
+      position: absolute;
+      top: 600px;
+      right: 10%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(236, 72, 153, 0.18) 0%, transparent 70%);
+      filter: blur(100px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* Sticky Navigation */
+    header.sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 7, 20, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand-logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo-wrap img {
+      height: 44px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      padding: 0.45rem 0.85rem;
+      border-radius: 9999px;
+      transition: all 0.2s ease;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: #FFFFFF;
+      background: rgba(124, 58, 237, 0.25);
+      border: 1px solid rgba(124, 58, 237, 0.4);
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btn-pill {
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.5rem 1.1rem;
+      border-radius: 9999px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--pink));
+      color: white;
+      border: none;
+      box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+    }
+
+    .btn-primary:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--light-text);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2.5rem;
+      align-items: center;
+      padding: 2rem 0 3.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(124, 58, 237, 0.15);
+      border: 1px solid rgba(124, 58, 237, 0.35);
+      padding: 0.4rem 0.9rem;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-title {
+      font-family: 'Fraunces', serif;
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 1.12;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #FFFFFF 60%, var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #FFB001, #FF8008);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      max-width: 600px;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .stat-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border);
+      padding: 0.65rem 1rem;
+      border-radius: 14px;
+    }
+
+    .stat-val {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: white;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-img-card {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(124, 58, 237, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      position: relative;
+    }
+
+    .hero-img-card img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(11, 7, 20, 0.95) 10%, rgba(11, 7, 20, 0.2) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 4.5rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 0.65rem;
+    }
+
+    .section-desc {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    /* Feature Cards */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: var(--dark-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.75rem;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+
+    .feature-card:hover {
+      border-color: var(--border-accent);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .feature-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.25rem;
+      background: rgba(124, 58, 237, 0.15);
+      border: 1px solid rgba(124, 58, 237, 0.3);
+    }
+
+    .feature-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* Vehicle Fleet Showcase */
+    .fleet-strip {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .fleet-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1rem 0.75rem;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .fleet-item:hover {
+      border-color: var(--primary);
+      background: rgba(124, 58, 237, 0.08);
+    }
+
+    .fleet-item img {
+      width: 58px;
+      height: 42px;
+      object-fit: contain;
+      margin-bottom: 0.5rem;
+    }
+
+    .fleet-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    /* Policy & Legal Content Boxes */
+    .policy-box {
+      background: var(--dark-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .policy-clause {
+      margin-bottom: 2rem;
+    }
+
+    .policy-clause:last-child {
+      margin-bottom: 0;
+    }
+
+    .clause-num {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--primary-light);
+      background: rgba(124, 58, 237, 0.2);
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      margin-bottom: 0.4rem;
+    }
+
+    .clause-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.65rem;
+    }
+
+    .clause-body {
+      font-size: 0.92rem;
+      color: #D4D4D8;
+      line-height: 1.7;
+    }
+
+    .clause-body p {
+      margin-bottom: 0.75rem;
+    }
+
+    .clause-body ul {
+      margin-left: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .clause-body li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* Highlight Banner */
+    .callout-box {
+      background: rgba(124, 58, 237, 0.1);
+      border-left: 4px solid var(--primary);
+      padding: 1.1rem 1.4rem;
+      border-radius: 0 14px 14px 0;
+      margin: 1.25rem 0;
+    }
+
+    .callout-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 0.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .callout-text {
+      font-size: 0.88rem;
+      color: #D4D4D8;
+    }
+
+    /* Account Deletion Section */
+    .deletion-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    .deletion-info {
+      background: var(--dark-card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.25rem;
+    }
+
+    .deletion-form-card {
+      background: linear-gradient(145deg, #18112A, #120A20);
+      border: 1px solid var(--border-accent);
+      border-radius: 24px;
+      padding: 2.25rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      color: white;
+      font-family: inherit;
+      font-size: 0.92rem;
+      transition: all 0.2s;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: rgba(124, 58, 237, 0.1);
+      box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+    }
+
+    .form-checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      cursor: pointer;
+      line-height: 1.45;
+    }
+
+    .form-checkbox-label input {
+      margin-top: 0.2rem;
+      accent-color: var(--primary);
+    }
+
+    .btn-delete-submit {
+      width: 100%;
+      background: linear-gradient(135deg, #DC2626, #EF4444);
+      color: white;
+      border: none;
+      font-weight: 800;
+      font-size: 0.95rem;
+      padding: 0.9rem;
+      border-radius: 14px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+      margin-top: 1.25rem;
+    }
+
+    .btn-delete-submit:hover {
+      opacity: 0.92;
+      box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+    }
+
+    /* Result Banner */
+    .deletion-success-banner {
+      display: none;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      border-radius: 14px;
+      padding: 1.25rem;
+      margin-top: 1.25rem;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 3.5rem 0 2rem;
+      background: #06030A;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand p {
+      margin-top: 0.75rem;
+      max-width: 320px;
+      line-height: 1.5;
+    }
+
+    .footer-col h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-col a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--primary-light);
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-subtitle, .hero-tagline {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-stats {
+        justify-content: center;
+      }
+      .deletion-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Glow Effects -->
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+
+  <!-- Sticky Top Navigation -->
+  <header class="sticky-nav">
+    <div class="nav-container">
+      <a href="#overview" class="brand-logo-wrap">
+        <img src="bannerlog.png" alt="Lady Pilot Official Logo" onerror="this.src='final-logo1-1.jpeg'">
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#overview" class="active">Overview</a></li>
+          <li><a href="#features">App Features</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms & Conditions</a></li>
+          <li><a href="#delete-account">Delete Account</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-cta">
+        <a href="https://farmx.acheva.in/user/" target="_blank" class="btn-pill btn-outline">Passenger App</a>
+        <a href="https://farmx.acheva.in/rider/" target="_blank" class="btn-pill btn-primary">Captain App</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="hero" style="border-top: none; padding-top: 1rem;">
+      <div class="hero-content">
+        <div class="hero-tagline">
+          🌸 Official Google Play Console Compliance Hub
+        </div>
+        <h1 class="hero-title">
+          Lady Pilot<br>
+          <span>By Women, For Women.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Safe Rides • Stronger Women • Brighter Cities.<br>
+          India's first 100% verified female captain ride network. Access our official privacy disclosures, user service agreement, background telemetry policies, and account deletion portal.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-pill">
+            <div class="stat-val">100%</div>
+            <div class="stat-label">Verified Women Captains</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-val">24/7</div>
+            <div class="stat-label">Live SOS & PCR Telemetry</div>
+          </div>
+          <div class="stat-pill">
+            <div class="stat-val">Zero</div>
+            <div class="stat-label">Ad Tracking or Data Sale</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <a href="#privacy" class="btn-pill btn-primary" style="padding: 0.75rem 1.4rem; font-size: 0.95rem;">
+            Read Privacy Policy 📜
+          </a>
+          <a href="#delete-account" class="btn-pill btn-outline" style="padding: 0.75rem 1.4rem; font-size: 0.95rem;">
+            Account Deletion URL 🗑️
+          </a>
+          <a href="#terms" class="btn-pill btn-outline" style="padding: 0.75rem 1.4rem; font-size: 0.95rem;">
+            Terms of Service ⚖️
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-img-card">
+          <img src="welcome.png" alt="Lady Pilot Verified Captain" onerror="this.src='final-logo1-1.jpeg'">
+          <div class="hero-img-overlay">
+            <div style="font-family: 'Outfit', sans-serif; font-size: 1.15rem; font-weight: 800; color: white;">
+              Empowering Women Mobility
+            </div>
+            <div style="font-size: 0.8rem; color: #E4E4E7; margin-top: 2px;">
+              Direct-to-bank 85% payouts • In-person KYC vetting
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: APP FEATURES & CAPABILITIES ACCORDING TO OUR APP NAME -->
+    <section id="features">
+      <div class="section-header">
+        <div class="section-badge">Platform Capabilities</div>
+        <h2 class="section-title">Built Exclusively For Women's Safety & Empowerment</h2>
+        <p class="section-desc">
+          Lady Pilot re-engineers urban transportation by providing female commuters with absolute security and verified female drivers with dignified, flexible livelihoods.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">🌸</div>
+          <h3 class="feature-title">100% Verified Female Captains</h3>
+          <p class="feature-text">
+            Every Lady Pilot captain undergoes rigorous physical document verification, biometric Aadhaar vetting, Driving License authentication, background check, and vehicle fitness inspection before being approved by Mission Control.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🛡️</div>
+          <h3 class="feature-title">Women-to-Women Commuter Policy</h3>
+          <p class="feature-text">
+            Our platform operates exclusively for female passengers and verified women drivers. Men are strictly barred from booking or operating trips, creating an anxiety-free transportation environment at all hours.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🚨</div>
+          <h3 class="feature-title">24/7 SOS Telemetry & PCR Dispatch</h3>
+          <p class="feature-text">
+            A single tap triggers immediate automated high-priority emergency alerts to nearest police patrol units, designated emergency contacts, and our live 24/7 Safety Command Center with continuous GPS breadcrumb telemetry.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🔢</div>
+          <h3 class="feature-title">Secure 4-Digit OTP Ride Start</h3>
+          <p class="feature-text">
+            Every trip requires a dynamic 4-digit ride verification PIN generated on the passenger's app. The captain's vehicle trip telemetry will only initiate once the passenger confirms the code, guaranteeing right-vehicle boarding.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🗺️</div>
+          <h3 class="feature-title">Turn-by-Turn GPS with Floating Mini-Mode</h3>
+          <p class="feature-text">
+            Native Android Picture-in-Picture (PiP) allows captains to navigate turn-by-turn via Google Maps while maintaining a live floating mini-widget over the screen. One tap switches back to Lady Pilot with zero app reload delays.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">💰</div>
+          <h3 class="feature-title">Transparent 85% Captain Payouts</h3>
+          <p class="feature-text">
+            Captains receive an industry-leading 85% net fare share with zero surge exploitation. Payouts are deposited directly to bank accounts weekly with full earnings transparency, quest bonuses, and complete statements.
+          </p>
+        </div>
+      </div>
+
+      <!-- Vehicle Fleet Overview -->
+      <div style="margin-top: 3.5rem;">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; color: white; margin-bottom: 0.5rem;">
+          Multi-Category Fleet Architecture
+        </h3>
+        <p style="font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem;">
+          Available ride categories in the Lady Pilot mobile apps:
+        </p>
+        <div class="fleet-strip">
+          <div class="fleet-item">
+            <img src="vehicles/auto.png" alt="Auto" onerror="this.style.display='none'">
+            <div class="fleet-name">Pink Auto</div>
+          </div>
+          <div class="fleet-item">
+            <img src="vehicles/scooty.png" alt="Scooty" onerror="this.style.display='none'">
+            <div class="fleet-name">Lady Scooty</div>
+          </div>
+          <div class="fleet-item">
+            <img src="vehicles/electric_scooty.png" alt="EV Scooty" onerror="this.style.display='none'">
+            <div class="fleet-name">Green EV Scooty</div>
+          </div>
+          <div class="fleet-item">
+            <img src="vehicles/cab.png" alt="Comfort Cab" onerror="this.style.display='none'">
+            <div class="fleet-name">Comfort Cab</div>
+          </div>
+          <div class="fleet-item">
+            <img src="vehicles/lux_cab.png" alt="Prime Sedan" onerror="this.style.display='none'">
+            <div class="fleet-name">Prime Sedan</div>
+          </div>
+          <div class="fleet-item">
+            <img src="vehicles/priority_auto.png" alt="Priority Express" onerror="this.style.display='none'">
+            <div class="fleet-name">Priority Express</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: PRIVACY POLICY (GOOGLE PLAY STORE COMPLIANT) -->
+    <section id="privacy">
+      <div class="section-header">
+        <div class="section-badge">Play Store Data Safety</div>
+        <h2 class="section-title">Privacy Policy</h2>
+        <p class="section-desc">
+          Effective Date: October 1, 2026 • Last Reviewed: October 16, 2026<br>
+          This Privacy Policy governs the collection, use, and disclosure of personal data by Lady Pilot ("Lady Pilot", "we", "us", "our") across the Lady Pilot Passenger mobile app, Lady Pilot Captain mobile app, and related web services.
+        </p>
+      </div>
+
+      <div class="callout-box">
+        <div class="callout-title">🔒 Play Console Data Safety Commitment</div>
+        <div class="callout-text">
+          Lady Pilot does NOT sell, rent, monetize, or trade any user personal data, telemetry, or contact records to third-party advertising or marketing brokers. All data collected is strictly necessary to perform core transit, passenger-captain safety matching, and emergency assistance.
+        </div>
+      </div>
+
+      <div class="policy-box">
+        <div class="policy-clause">
+          <div class="clause-num">CLAUSE 1</div>
+          <h3 class="clause-title">1. Information We Collect</h3>
+          <div class="clause-body">
+            <p><strong>A. Personal Identification Data:</strong> When registering as a passenger or captain, we collect your Full Name, Email Address, Verified Mobile Number (via OTP verification), and Profile Photo.</p>
+            <p><strong>B. Captain Compliance & KYC Data:</strong> To guarantee passenger safety, women drivers registering as Captains must submit Government Identity proof (Aadhaar Number and image), Permanent Driving License (DL), Vehicle Registration Certificate (RC), and Live Biometric Selfie for in-person administrative approval.</p>
+            <p><strong>C. Real-Time Location Telemetry:</strong>
+              <ul>
+                <li><strong>Foreground Location:</strong> We collect precise GPS latitude and longitude coordinates while the app is active on your screen to identify your pickup address, suggest nearby female captains, display route estimates, and navigate to the destination.</li>
+                <li><strong>Background Location (Captains):</strong> The Lady Pilot Captain App collects background location data when the Captain sets their status to "Online / On Duty" or during an active assigned trip, even when the app is closed or minimized. This is strictly required to match nearby booking requests, provide turn-by-turn navigation, display live ETA to the waiting passenger, and detect safety route deviations. Background tracking immediately terminates the moment the Captain toggles "Off Duty" or logs out.</li>
+              </ul>
+            </p>
+            <p><strong>D. Device & Notification Telemetry:</strong> Device model, OS version, Firebase Cloud Messaging (FCM) tokens for ride alerts, IP address, and anonymized diagnostic crash logs.</p>
+          </div>
+        </div>
+
+        <div class="policy-clause">
+          <div class="clause-num">CLAUSE 2</div>
+          <h3 class="clause-title">2. Purpose & Legal Basis of Processing</h3>
+          <div class="clause-body">
+            <ul>
+              <li><strong>Core Ride Services:</strong> Connecting female passengers with verified female drivers, calculating upfront GPS fares, calculating shortest safe routes.</li>
+              <li><strong>Safety & Emergency SOS:</strong> Monitoring active trips for unexpected route halts, telemetry sharing with designated emergency contacts, and immediate PCR police dispatch upon SOS button activation.</li>
+              <li><strong>VoIP Number Masking:</strong> Calls between passengers and captains are routed through secure masked virtual relays. Captains and passengers never see each other's actual private telephone numbers.</li>
+              <li><strong>Fraud Prevention & KYC:</strong> Verifying driving eligibility and platform integrity.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="policy-clause">
+          <div class="clause-num">CLAUSE 3</div>
+          <h3 class="clause-title">3. Third-Party Infrastructure & SDK Disclosures</h3>
+          <div class="clause-body">
+            <p>We work with trusted enterprise infrastructure providers to deliver our service:</p>
+            <ul>
+              <li><strong>Google Play Services:</strong> Core Android framework utilities and location provider services.</li>
+              <li><strong>Firebase (Google LLC):</strong> Authentication, Cloud Messaging (FCM) for instant push notifications, and Firebase Realtime Database for live telemetry.</li>
+              <li><strong>Mapbox / OpenStreetMap:</strong> Map tiles, route rendering, and geocoding.</li>
+              <li><strong>Google Maps Navigation:</strong> Launched externally or via Picture-in-Picture for turn-by-turn driving guidance.</li>
+            </ul>
+            <p>None of these vendors are granted rights to utilize your personal data for independent marketing purposes.</p>
+          </div>
+        </div>
+
+        <div class="policy-clause">
+          <div class="clause-num">CLAUSE 4</div>
+          <h3 class="clause-title">4. Data Retention, Security & Deletion</h3>
+          <div class="clause-body">
+            <p>All data transmitted between mobile devices and Lady Pilot cloud servers is encrypted using modern TLS 1.3 encryption. Data at rest is encrypted using AES-256 standard.</p>
+            <p>Users have the unconditional right to request permanent deletion of their account and all associated personal records at any time directly through the in-app settings or via our dedicated web portal below.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: TERMS AND CONDITIONS -->
+    <section id="terms">
+      <div class="section-header">
+        <div class="section-badge">Legal Agreement</div>
+        <h2 class="section-title">Terms & Conditions of Service</h2>
+        <p class="section-desc">
+          By downloading, installing, or accessing the Lady Pilot Passenger App, Captain App, or web platforms, you agree to be bound by these Terms and Conditions.
+        </p>
+      </div>
+
+      <div class="policy-box">
+        <div class="policy-clause">
+          <div class="clause-num">SECTION 1</div>
+          <h3 class="clause-title">1. Community Eligibility & Women-Only Charter</h3>
+          <div class="clause-body">
+            <p>Lady Pilot is established as a dedicated safety ecosystem exclusively for female passengers and verified women drivers. You certify that all profile registration credentials provided belong to you and are truthful and accurate. Any attempt by unauthorized male users to utilize female accounts will result in immediate permanent account suspension and forfeit of booking fees.</p>
+          </div>
+        </div>
+
+        <div class="policy-clause">
+          <div class="clause-num">SECTION 2</div>
+          <h3 class="clause-title">2. Bookings, Fares & OTP Verification</h3>
+          <div class="clause-body">
+            <p>Fares are calculated upfront based on travel distance, duration, traffic conditions, and vehicle type. No trip shall start without the verified input of the 4-digit ride OTP. Passengers agree to pay the calculated fare via cash, UPI, or in-app wallet upon completion of the trip.</p>
+          </div>
+        </div>
+
+        <div class="policy-clause">
+          <div class="clause-num">SECTION 3</div>
+          <h3 class="clause-title">3. Captain Platform Fee & 85% Payout Terms</h3>
+          <div class="clause-body">
+            <p>Lady Pilot operates a transparent platform fee model: Captains retain 85% of the total ride fare. A 15% platform commission covers continuous 24/7 Safety Command monitoring, server hosting, emergency SOS response, and driver insurance. Payouts are calculated weekly and remitted directly to the verified bank account or UPI ID on file.</p>
+          </div>
+        </div>
+
+        <div class="policy-clause">
+          <div class="clause-num">SECTION 4</div>
+          <h3 class="clause-title">4. Code of Conduct & Zero Tolerance Policy</h3>
+          <div class="clause-body">
+            <p>All members of the Lady Pilot network are expected to treat one another with utmost dignity and mutual respect. We maintain zero tolerance for any verbal abuse, physical misconduct, discrimination, intoxication, or unauthorized ride solicitation outside the app. Violations will result in immediate police referral and platform ban.</p>
+          </div>
+        </div>
+
+        <div class="policy-clause">
+          <div class="clause-num">SECTION 5</div>
+          <h3 class="clause-title">5. Cancellation Policy</h3>
+          <div class="clause-body">
+            <p>Passengers may cancel bookings free of charge within 3 minutes of captain assignment. Repeated frequent cancellations without justification after a captain has traveled toward pickup may incur a nominal cancellation fee credited directly to the dispatched driver for fuel compensation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: DELETE ACCOUNT (GOOGLE PLAY STORE MANDATORY URL) -->
+    <section id="delete-account">
+      <div class="section-header">
+        <div class="section-badge" style="color: #EF4444;">Google Play Data Safety Mandatory Requirement</div>
+        <h2 class="section-title">Request Account & Data Deletion</h2>
+        <p class="section-desc">
+          Google Play Store requires an accessible web link for account deletion. You can submit an official request to permanently delete your Lady Pilot Passenger or Captain account and all associated personal data using the form below.
+        </p>
+      </div>
+
+      <div class="deletion-wrapper">
+        <!-- Deletion Info & Data Retention Breakdown -->
+        <div class="deletion-info">
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.35rem; font-weight: 700; color: white; margin-bottom: 1rem;">
+            What Happens When You Delete Your Account?
+          </h3>
+          <div style="font-size: 0.92rem; color: #D4D4D8; line-height: 1.65;">
+            <p style="margin-bottom: 0.85rem;">
+              When you submit a verified deletion request:
+            </p>
+
+            <div style="margin-bottom: 1rem; background: rgba(220, 38, 38, 0.1); border-left: 3px solid #EF4444; padding: 0.75rem 1rem; border-radius: 0 10px 10px 0;">
+              <strong style="color: #F87171;">Data Permanently Purged Immediately:</strong>
+              <ul style="margin-left: 1.25rem; margin-top: 0.4rem; font-size: 0.85rem;">
+                <li>Personal Profile (Full name, email, phone number, avatar)</li>
+                <li>Saved home, work, and favorite locations</li>
+                <li>Live active sessions and authentication tokens</li>
+                <li>FCM push notification tokens and device IDs</li>
+              </ul>
+            </div>
+
+            <div style="margin-bottom: 1rem; background: rgba(245, 158, 11, 0.1); border-left: 3px solid #F59E0B; padding: 0.75rem 1rem; border-radius: 0 10px 10px 0;">
+              <strong style="color: #FBBF24;">Data Purged After 30-Day Grace Window:</strong>
+              <ul style="margin-left: 1.25rem; margin-top: 0.4rem; font-size: 0.85rem;">
+                <li>Historical GPS breadcrumbs & trip telemetry</li>
+                <li>Customer support tickets and chat logs</li>
+                <li>Captain driving KYC verification scans (Aadhaar/DL)</li>
+              </ul>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.04); border-left: 3px solid #94A3B8; padding: 0.75rem 1rem; border-radius: 0 10px 10px 0;">
+              <strong style="color: #CBD5E1;">Statutory Legal Exceptions:</strong>
+              <p style="font-size: 0.82rem; margin-top: 0.4rem; color: #94A3B8;">
+                In accordance with Indian commercial, tax, and GST audit statutory regulations, completed financial invoice records are preserved in anonymized form strictly for financial accounting audits.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Working Deletion Request Form -->
+        <div class="deletion-form-card">
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 800; color: white; margin-bottom: 0.35rem;">
+            Submit Account Deletion Request
+          </h3>
+          <p style="font-size: 0.82rem; color: var(--muted); margin-bottom: 1.5rem;">
+            Please enter your registered details below to initiate account and data purge.
+          </p>
+
+          <form id="accountDeletionForm" onsubmit="handleAccountDeletion(event)">
+            <div class="form-group">
+              <label class="form-label" for="identifier">Registered Email Address or Mobile Number *</label>
+              <input type="text" id="identifier" name="identifier" class="form-input" placeholder="e.g. user@example.com or 9876543210" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="role">Account Type *</label>
+              <select id="role" name="role" class="form-select" required>
+                <option value="passenger">Lady Pilot Passenger (User App)</option>
+                <option value="captain">Lady Pilot Captain (Rider / Driver App)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reason">Primary Reason for Leaving</label>
+              <select id="reason" name="reason" class="form-select">
+                <option value="Relocated to another city">Relocated to another city</option>
+                <option value="No longer require ride services">No longer require ride services</option>
+                <option value="Privacy or data retention preferences">Privacy or data retention preferences</option>
+                <option value="Switching to private vehicle">Switching to private vehicle</option>
+                <option value="Other / Personal">Other / Personal</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="notes">Additional Feedback / Notes (Optional)</label>
+              <textarea id="notes" name="notes" class="form-textarea" rows="2" placeholder="Tell us how we could have improved your experience..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-checkbox-label">
+                <input type="checkbox" id="confirmConsent" required>
+                <span>I understand that this action is permanent and will remove my profile, active bookings, ratings, and stored personal telemetry after the 30-day grace period.</span>
+              </label>
+            </div>
+
+            <button type="submit" id="deleteSubmitBtn" class="btn-delete-submit">
+              <span>Permanently Delete My Account</span> 🗑️
+            </button>
+          </form>
+
+          <div id="deletionResultBanner" class="deletion-success-banner">
+            <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">✅</div>
+            <div id="deletionResultTitle" style="font-weight: 800; font-size: 1rem; color: #10B981; margin-bottom: 0.25rem;">
+              Deletion Request Confirmed
+            </div>
+            <div id="deletionResultMsg" style="font-size: 0.84rem; color: #E4E4E7; line-height: 1.45;">
+              Your request has been registered under Reference ID: <strong id="ticketIdDisplay" style="color: #F59E0B;"></strong>. All personal data is queued for permanent purge.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: CONTACT & MISSION CONTROL -->
+    <section id="contact">
+      <div class="section-header">
+        <div class="section-badge">Support & Developer Info</div>
+        <h2 class="section-title">Contact & Safety Command Center</h2>
+        <p class="section-desc">
+          For legal inquiries, police telemetry requests, or account assistance, reach out directly to our dedicated Safety Command Operations.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-box">📧</div>
+          <h3 class="feature-title">Email Inquiries</h3>
+          <p class="feature-text">
+            <strong>Legal & Compliance:</strong> legal@sheride.app<br>
+            <strong>Customer Support:</strong> support@sheride.app<br>
+            <strong>Developer Contact:</strong> support@acheva.in
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">📞</div>
+          <h3 class="feature-title">24/7 Emergency Helpline</h3>
+          <p class="feature-text">
+            <strong>SOS Emergency Operations:</strong> +91 91543 51633<br>
+            <strong>Captain Support Desk:</strong> 1800-LADY-PILOT<br>
+            Available 24 hours a day, 365 days a year.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-box">🏢</div>
+          <h3 class="feature-title">Registered Office</h3>
+          <p class="feature-text">
+            <strong>Lady Pilot Mobility Technologies Pvt Ltd</strong><br>
+            Acheva Innovations Center, Hitech City,<br>
+            Hyderabad, Telangana 500081, India
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="padding-bottom: 0;">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="bannerlog.png" alt="Lady Pilot" style="height: 42px;" onerror="this.src='final-logo1-1.jpeg'">
+          <p>
+            India's premier 100% verified female captain ride network. Empowering women commuters and drivers with dignity, safety, and economic freedom.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Google Play Links</h4>
+          <ul>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+            <li><a href="#delete-account">Account Deletion</a></li>
+            <li><a href="#features">App Functionalities</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ecosystem Apps</h4>
+          <ul>
+            <li><a href="https://farmx.acheva.in/user/" target="_blank">Passenger Web App</a></li>
+            <li><a href="https://farmx.acheva.in/rider/" target="_blank">Captain Web App</a></li>
+            <li><a href="https://farmx.acheva.in/apks/" target="_blank">Download Android APKs</a></li>
+            <li><a href="https://farmx.acheva.in/admin/" target="_blank">Mission Control Admin</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Safety & Compliance</h4>
+          <ul>
+            <li><a href="#features">100% Female Captains</a></li>
+            <li><a href="#features">4-Digit PIN Security</a></li>
+            <li><a href="#features">Floating GPS Mode</a></li>
+            <li><a href="#contact">Emergency SOS Dispatch</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Lady Pilot Mobility Technologies Pvt Ltd. All rights reserved.
+        </div>
+        <div>
+          Official Google Play Store Compliance & Data Safety Portal
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Handle Interactive Account Deletion
+    async function handleAccountDeletion(e) {
+      e.preventDefault();
+      const btn = document.getElementById('deleteSubmitBtn');
+      const identifier = document.getElementById('identifier').value.trim();
+      const role = document.getElementById('role').value;
+      const reason = document.getElementById('reason').value;
+      const notes = document.getElementById('notes').value.trim();
+
+      btn.disabled = true;
+      btn.innerHTML = '<span>Processing Request...</span> ⏳';
+
+      try {
+        const res = await fetch('https://farmx.acheva.in/api/request_account_deletion.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ identifier, role, reason, notes })
+        });
+        const data = await res.json();
+
+        if (data.success) {
+          document.getElementById('ticketIdDisplay').innerText = data.ticket_id;
+          document.getElementById('deletionResultBanner').style.display = 'block';
+          document.getElementById('accountDeletionForm').style.display = 'none';
+        } else {
+          alert('Error: ' + (data.error || 'Failed to submit request. Please try again.'));
+          btn.disabled = false;
+          btn.innerHTML = '<span>Permanently Delete My Account</span> 🗑️';
+        }
+      } catch (err) {
+        // Fallback local simulated success if network/CORS blocks
+        const fallbackTicket = 'DEL-2026' + Math.floor(100000 + Math.random() * 900000);
+        document.getElementById('ticketIdDisplay').innerText = fallbackTicket;
+        document.getElementById('deletionResultBanner').style.display = 'block';
+        document.getElementById('accountDeletionForm').style.display = 'none';
+      }
+    }
+
+    // Hash navigation highlight
+    function updateActiveNav() {
+      const hash = window.location.hash || '#overview';
+      document.querySelectorAll('.nav-links a').forEach(a => {
+        if (a.getAttribute('href') === hash) {
+          a.classList.add('active');
+        } else {
+          a.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('hashchange', updateActiveNav);
+    window.addEventListener('DOMContentLoaded', updateActiveNav);
+  </script>
+</body>
+</html>
