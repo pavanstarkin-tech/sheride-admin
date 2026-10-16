@@ -27,8 +27,8 @@ export const rtdb = getDatabase(app);
 // Mapbox Public Web Token (Constructed dynamically to prevent bundler scanner false positive)
 export const MAPBOX_ACCESS_TOKEN = [
   'p' + 'k',
-  ['eyJ1IjoicGF2YW5rdW1h', 'cnN3YW15IiwiYSI6', 'ImNtNnc1c3ZpdTBkd', 'GgyanM5b25rN2ZqcncifQ'].join(''),
-  'Ls1e2W6rx3apoBsStWa5Ow'
+  'eyJ1IjoicGF2YW5rdW1hcnN3YW15IiwiYSI6ImNtdmFwZDZzMjA3dW4yeXM4OXh4NDMzN2kifQ',
+  'yKR8ELvS6UQQignc38tC0g'
 ].join('.');
 
 export default app;
