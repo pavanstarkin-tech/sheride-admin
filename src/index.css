@@ -1,0 +1,73 @@
+@import 'mapbox-gl/dist/mapbox-gl.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 127 0 253;
+    --primary-foreground: 246 246 254;
+    --golden: 255 176 1;
+    --golden-foreground: 24 13 43;
+    --softwhite: 246 246 254;
+  }
+  
+  body {
+    @apply bg-[#F6F6FE] text-[#180D2B] antialiased font-sans selection:bg-purple-100 selection:text-purple-900;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Fraunces', 'Recoleta', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1eeff;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4c8fc;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7f00fd;
+}
+
+/* Pulsing SOS effect */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+  }
+}
+
+.sos-pulse {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-purple {
+  background: rgba(127, 0, 253, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
